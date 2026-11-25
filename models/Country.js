@@ -1,9 +1,9 @@
-const { Datatypes } = require('sequelize')
+const { DataTypes } = require('sequelize')
 const sequelize = require('../database')
 
 const Country = sequelize.define('Country', {
-    name: { type: Datatypes.STRING, allowNull: false},
-    continent: { type: Datatypes.STRING, allowNull: true}
+    name: { type: DataTypes.STRING, allowNull: false},
+    continent: { type: DataTypes.STRING, allowNull: true}
 })
 
 module.exports = Country

@@ -10,6 +10,8 @@ City.belongsTo(Country, {foreignKey: 'countryId', as: 'country'})
 
 async function main(pk) {
     try {
+    const ok = await testConnection();
+    if (!ok) process.exit(1);
     await sequelize.sync({ force: true });
     console.log('Таблицы синхронизированы.');
 
